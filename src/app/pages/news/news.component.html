@@ -1,0 +1,56 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mt-4 mb-4">
+        <div class="page_title">
+          <h5 class="mb-3">Latest news</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 mb-4 d-flex flex-column flex-grow-1"
+        *ngFor="
+          let item of newssArray
+            | paginate: { itemsPerPage: 6, currentPage: p };
+          let i = index
+        "
+      >
+        <div class="news-card h-100">
+          <div class="header">
+            <h6>{{ item.title | slice: 0:50 }}....</h6>
+          </div>
+          <div class="body">
+            <p>{{ item.content | slice: 0:600 }}</p>
+          </div>
+          <div class="footer d-flex mb-3 justify-content-between">
+            <div class="d-flex">
+              <a class="full_article_link">Read full article</a>
+              <a class="ml-4 grey-col" (click)="addBookMark(item)"
+                ><i class="fa fa-star"></i> Add to bookmarks</a
+              >
+            </div>
+            <div>
+              <p class="published_date">{{ item.publishedAt | date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-end">
+          <ng-container>
+            <div class="d-flex justify-content-end">
+              <pagination-controls
+                (pageChange)="p = $event"
+                nextLabel=""
+                previousLabel=""
+              ></pagination-controls>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

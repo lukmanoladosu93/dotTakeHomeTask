@@ -1,0 +1,19 @@
+<header>
+  <nav class="top_nav">
+    <a class="navbar-brand" href="#">NewsOnline</a>
+    <ul class="navbar_nav">
+      <li
+        class="nav-item"
+        [ngClass]="[classChanger !== 'bookmarks' ? 'active' : '']"
+      >
+        <a class="nav-link" (click)="selectRoute('news')">News</a>
+      </li>
+      <li
+        class="nav-item"
+        [ngClass]="[classChanger === 'bookmarks' ? 'active' : '']"
+      >
+        <a class="nav-link" (click)="selectRoute('bookmarks')">Bookmarks</a>
+      </li>
+    </ul>
+  </nav>
+</header>

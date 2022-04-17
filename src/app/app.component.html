@@ -1,0 +1,11 @@
+<app-header (selectedRoute)="selectRoute($event)"></app-header>
+<app-news
+  [newssArray]="newsArray"
+  *ngIf="routeValue !== 'bookmarks'"
+  (bookmarkedNews)="onAddBookmark($event)"
+></app-news>
+<app-bookmarks
+  [bookmarkedArray]="bookmarkArray"
+  *ngIf="routeValue === 'bookmarks'"
+></app-bookmarks>
+<router-outlet></router-outlet>

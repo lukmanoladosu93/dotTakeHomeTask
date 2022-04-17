@@ -1,0 +1,97 @@
+// Style for top navigation
+body {
+  background-color: #fcfcfc;
+}
+a {
+  cursor: pointer;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  nav {
+    background-color: #03009e;
+    height: 75px;
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 0 35px;
+
+    .navbar-brand {
+      color: #fff;
+    }
+
+    .navbar_nav {
+      display: flex;
+      list-style-type: none;
+      margin-bottom: 0;
+
+      li {
+        a {
+          color: #fff;
+        }
+      }
+      .active {
+        a {
+          color: orange;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 90px;
+
+  .container-fluid {
+    padding: 0 35px;
+  }
+}
+.news-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(165, 165, 165, 0.15);
+  width: 100%;
+
+  .header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .body {
+    padding: 25px 20px;
+  }
+  .footer {
+    padding: 15px 20px;
+
+    .full_article_link {
+      color: #03009e;
+      text-decoration: underline;
+      font-size: 0.825rem;
+    }
+  }
+  .grey-col {
+    color: #747373;
+    font-size: 0.825rem;
+  }
+  .published_date {
+    color: #7d7d81;
+    font-size: 0.825rem;
+  }
+}
+.page_title {
+  border-bottom: 1px solid #ccc;
+
+  h5 {
+    color: #03009e;
+  }
+}
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: #03009e !important;
+  color: #fefefe;
+  cursor: default;
+  border-radius: 5px;
+}
