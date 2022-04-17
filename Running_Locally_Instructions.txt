@@ -1,0 +1,14 @@
+Steps to run the application locally.
+
+1. Unzip the project folder.
+
+2. Open your the project folder with your code editor (vscode preferrably).
+
+3. If the editor is vscode, open a new terminal on your editor else if its a editor witout a terminal, you can use your command line
+   and navigate to the project folder directory (eg cd dotTakeHome).
+
+4. Type ng serve and press enter.
+
+5. Once the application is done serving, you will get a local url ('localhost:400' most times) to run on your browser.
+
+6. Theapplication will open up and you can navigate through the application but make sure you have internet connection.
